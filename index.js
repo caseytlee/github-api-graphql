@@ -27,7 +27,7 @@ const startServer = async () => {
     link: gitHubLink
   });
 
-  const server = new ApolloServer({ cors: false, schema: gitHubSchema });
+  const server = new ApolloServer({ cors: true, schema: gitHubSchema });
 
   return await server.listen({ port: process.env.PORT || 4000 });
 };
